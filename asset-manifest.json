@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/static/css/main.02128fb0.css",
+    "main.js": "/static/js/main.2b34a6c0.js",
+    "static/media/Saadati_002.mp4": "/static/media/Saadati_002.0a7a529c7482cce31352.mp4",
+    "static/media/background.png.jpg": "/static/media/background.png.7b7ce905e40dcb1046f6.jpg",
+    "static/media/korbor.jpg": "/static/media/korbor.4a635d4f1682c87864fb.jpg",
+    "static/media/sheytoon-app.png": "/static/media/sheytoon-app.8a50b1cbbf8463c56ba1.png",
+    "static/media/profile.png": "/static/media/profile.0810549a60b59c8802b8.png",
+    "static/media/pearl.png": "/static/media/pearl.c8462291af1ad5ccc94d.png",
+    "static/media/lap top.webp": "/static/media/lap top.93b5c0fe5d9915c6b2c3.webp",
+    "static/media/kor.jpg": "/static/media/kor.7bb0b5ce96837a5df9cf.jpg",
+    "static/media/resume.pdf": "/static/media/resume.d0db179ed7ba37225508.pdf",
+    "static/media/logo.png": "/static/media/logo.b1cc4ed40e776de839fc.png",
+    "static/media/logodd.png": "/static/media/logodd.39b146bb38adb7c13a4e.png",
+    "static/media/Untitled-1.png": "/static/media/Untitled-1.424d03ea02c3202f6961.png",
+    "index.html": "/index.html",
+    "main.02128fb0.css.map": "/static/css/main.02128fb0.css.map",
+    "main.2b34a6c0.js.map": "/static/js/main.2b34a6c0.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.02128fb0.css",
+    "static/js/main.2b34a6c0.js"
+  ]
+}

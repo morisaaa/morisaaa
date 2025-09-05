@@ -1,37 +1,29 @@
-name: Deploy static content to Pages
-
-on:
+on: 
   push:
-    branches: ["main"]
-  workflow_dispatch:
-
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-
-concurrency:
-  group: "pages"
-  cancel-in-progress: false
-
+    branches: [ main ]
+name: 🚀 Deploy website on push
 jobs:
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+  web-deploy:
+    name: 🚀 Deploy React
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Get latest code
         uses: actions/checkout@v4
-
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+      - name: Use Node.js 20
+        uses: actions/setup-node@v2
         with:
-          path: "."
-
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+          node-version: '20'
+      - name: ⛏️Build Project
+        run: |
+          npm install
+          npm run build
+      - name: Copy .htaccess to dist
+        run: cp .htaccess dist/.htaccess
+      - name: 📁 Sync files
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_HOST }}
+          username: ${{ secrets.FTP_USER }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: "dist/"
+          server-dir: "public_html/"
